@@ -1,23 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-project</title>
-    <!-- <link rel="stylesheet" href="./src/style.css"> -->
+    <title>Meteo Charts</title>
   </head>
+
   <body>
-    <header>
-      <h1>Super meteo Genova</h1>
-    </header>
-    
-    <div id="app">
-      <div id="meteo-data"></div>
-    </div>
-    <footer>
-      <p>© 2024 Super meteo Genova</p>
-    </footer>
+    <main class="page">
+      <header class="header">
+        <h1>Meteo Genova (24 ore)</h1>
+        <p id="status">Caricamento dati…</p>
+      </header>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Temperatura (°C)</h2>
+          <div class="chart-wrapper">
+            <canvas id="temperature-chart"></canvas>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Pioggia (mm)</h2>
+          <div class="chart-wrapper">
+            <canvas id="rain-chart"></canvas>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Vento (km/h)</h2>
+          <div class="chart-wrapper">
+            <canvas id="wind-chart"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
